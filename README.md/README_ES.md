@@ -32,8 +32,8 @@ A diferencia de herramientas aisladas, Promplab integra:
 
 La plataforma prioriza la optimización de costos y la latencia mediante persistencia de análisis y caché temporal.
 
-*   📄 **[Ver Diagrama de Arquitectura](architecture/architecture_ES.md)** (Microservicios, Flask, React).
-*   🧠 **[Leer Decisiones de Diseño](architecture/DESIGN_DECISIONS_ES.md)** (Trade-offs sobre inferencia y almacenamiento).
+*   📄 **[Ver Diagrama de Arquitectura](architecture/architecture.md)** (Microservicios, Flask, React).
+*   🧠 **[Leer Decisiones de Diseño](architecture/DESIGN_DECISIONS.md)** (Trade-offs sobre inferencia y almacenamiento).
 
 ---
 
@@ -44,7 +44,7 @@ Se han seleccionado módulos específicos para ilustrar la capacidad de orquesta
 | Componente | Descripción Técnica | Archivo |
 | :--- | :--- | :--- |
 | **Backend & IA** | Orquestación de modelos con **Lazy Loading** (Singleton), aislamiento de cuotas (Multi-tenant) y patrón Dispatcher. | [📄 backend_example.py](code-excerpts/backend_example.py) |
-| **Frontend (React)** | Arquitectura asíncrona, máquinas de estado para procesos largos y seguridad vía JWT headers. | [📄 frontend_sample.jsx](code-excerpts/frontend_sample.jsx) |
+| **Frontend (React)** | Arquitectura asíncrona, máquinas de estado para procesos largos y seguridad vía JWT headers. | [📄 frontend_example.jsx](code-excerpts/frontend_sample.jsx) |
 | **Base de Datos** | Implementación de políticas **RLS (Row Level Security)** y estructuras JSONB para métricas flexibles. | [📄 schema_example.sql](code-excerpts/schema_example.sql) |
 
 ---

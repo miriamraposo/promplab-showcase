@@ -44,7 +44,7 @@ Specific modules have been selected to illustrate orchestration capabilities and
 | Component | Technical Description | File |
 | :--- | :--- | :--- |
 | **Backend & AI** | Model orchestration with **Lazy Loading** (Singleton), quota isolation (Multi-tenant), and Dispatcher pattern. | [📄 backend_example.py](code-excerpts/backend_example.py) |
-| **Frontend (React)** | Asynchronous architecture, state machines for long processes, and security via JWT headers. | [📄 frontend_sample.jsx](code-excerpts/frontend_sample.jsx) |
+| **Frontend (React)** | Asynchronous architecture, state machines for long processes, and security via JWT headers. | [📄 frontend_example.jsx](code-excerpts/frontend_sample.jsx) |
 | **Database** | Implementation of **RLS (Row Level Security)** policies and JSONB structures for flexible metrics. | [📄 schema_example.sql](code-excerpts/schema_example.sql) |
 
 ---
