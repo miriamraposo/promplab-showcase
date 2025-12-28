@@ -21,7 +21,7 @@ An illustration of the platform's full interoperability:
 ### Functional Scope
 Unlike isolated tools, Promplab integrates:
 *   📊 **Tabular Data:** Automated cleaning, imputation, and exploratory analysis.
-*   🧠 Machine Learning: Supervised modeling, clustering, and sensitivity analysis, including model validation and inference engines for new datasets.
+*   🧠 **Machine Learning:** Supervised modeling, clustering, and sensitivity analysis, including model validation and inference engines for new datasets.
 *   👁️ **Computer Vision:** OCR, object detection, and segmentation.
 *   💬 **NLP & Chat:** Sentiment analysis, topic modeling, and semantic chat (RAG).
 *   🕸️ **Graphs:** Network analysis and community detection.
@@ -32,8 +32,8 @@ Unlike isolated tools, Promplab integrates:
 
 The platform prioritizes cost optimization and latency through analysis persistence and temporary caching.
 
-*   📄 **[View Architecture Diagram](./architecture/architecture_EN.md)** (Microservices, Flask, React).
-*   🧠 **[Read Design Decisions](./architecture/DESIGN_DECISIONS_ES.md)** (Trade-offs on inference and storage).
+*   📄 **[View Architecture Diagram](architecture/architecture_EN.md)** (Microservices, Flask, React).
+*   🧠 **[Read Design Decisions](architecture/DESIGN_DECISIONS_EN.md)** (Trade-offs on inference and storage).
 
 ---
 
@@ -43,9 +43,9 @@ Specific modules have been selected to illustrate orchestration capabilities and
 
 | Component | Technical Description | File |
 | :--- | :--- | :--- |
-| **Backend & AI** | Model orchestration with **Lazy Loading** (Singleton), quota isolation (Multi-tenant), and Dispatcher pattern. | [📄 backend_example.py](./code-excerpts/backend_example.py) |
-| **Frontend (React)** | Asynchronous architecture, state machines for long processes, and security via JWT headers. | [📄 frontend_example.jsx](./code-excerpts/frontend_sample.jsx) |
-| **Database** | Implementation of **RLS (Row Level Security)** policies and JSONB structures for flexible metrics. | [📄 schema_example.sql](./code-excerpts/schema_example.sql) |
+| **Backend & AI** | Model orchestration with **Lazy Loading** (Singleton), quota isolation (Multi-tenant), and Dispatcher pattern. | [📄 backend_example.py](code-excerpts/backend_example.py) |
+| **Frontend (React)** | Asynchronous architecture, state machines for long processes, and security via JWT headers. | [📄 frontend_sample.jsx](code-excerpts/frontend_sample.jsx) |
+| **Database** | Implementation of **RLS (Row Level Security)** policies and JSONB structures for flexible metrics. | [📄 schema_example.sql](code-excerpts/schema_example.sql) |
 
 ---
 
@@ -53,7 +53,7 @@ Specific modules have been selected to illustrate orchestration capabilities and
 
 Persistence is managed via **Supabase (PostgreSQL)**. The design ensures each user operates in an isolated environment, encrypted at rest and in transit.
 
-![Database Schema](./asset/supabase_schema.png)
+![Database Schema](asset/supabase-schema.jpg)
 
 *   **Security:** See `schema_example.sql` for details on how RLS policies ensure total isolation of models and predictions per user.
 
@@ -69,7 +69,7 @@ Persistence is managed via **Supabase (PostgreSQL)**. The design ensures each us
 
 ## 🛠️ Tech Stack
 
-Detailed list in [`requirements.txt`](./requirements.txt).
+Detailed list in [`requirements.txt`](requirements.txt).
 
 *   **Backend:** Python, Flask, Supabase, Google Gemini API.
 *   **Data Science:** Pandas, Scikit-learn, Torch, Polars, NetworkX.
@@ -77,7 +77,6 @@ Detailed list in [`requirements.txt`](./requirements.txt).
 
 ---
 
-## 👤 Author
 ## 🤖 Development Methodology: AI-First
 
 This project was built using an **AI-Augmented Development** philosophy.
@@ -89,4 +88,12 @@ As a Solo-Founder, I leveraged Generative AI tools (Gemini/ChatGPT) as force mul
 *   **Integration:** Assembling modules, debugging, and validating the generated logic.
 
 This approach enabled the delivery of a commercial-grade MVP in just **6 months**, showcasing product management skills and technical efficiency.
+
+---
+
+## 👤 Author
+
+**Miriam Raposo**  
+*Data Science & AI Technician | Solutions Architect*
+
 Developed as a comprehensive End-to-End solution. If you have questions about the technical implementation or architecture, feel free to reach out.

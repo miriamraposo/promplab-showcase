@@ -18,11 +18,10 @@ Un ejemplo de la interoperabilidad completa de la plataforma:
 3.  **Modelado:** El CSV alimenta el módulo de ML → Entrenamiento y validación de modelos.
 4.  **Aplicación:** El modelo guardado se utiliza para realizar un **Análisis de Sensibilidad**, cerrando el ciclo de valor al permitir la inferencia sobre nuevos conjuntos de datos.
 
-
 ### Alcance Funcional
 A diferencia de herramientas aisladas, Promplab integra:
 *   📊 **Datos Tabulares:** Limpieza automática, imputación y análisis exploratorio.
-*   🧠 Machine Learning: Modelado supervisado, clustering, validación cruzada y motores de inferencia para predicción sobre nuevos conjuntos de datos.
+*   🧠 **Machine Learning:** Modelado supervisado, clustering, validación cruzada y motores de inferencia.
 *   👁️ **Visión por Computadora:** OCR, detección de objetos y segmentación.
 *   💬 **NLP & Chat:** Análisis de sentimiento, tópicos y chat semántico sobre documentos (RAG).
 *   🕸️ **Grafos:** Análisis de redes y detección de comunidades.
@@ -33,8 +32,8 @@ A diferencia de herramientas aisladas, Promplab integra:
 
 La plataforma prioriza la optimización de costos y la latencia mediante persistencia de análisis y caché temporal.
 
-*   📄 **[Ver Diagrama de Arquitectura](./architecture/architecture.md)** (Microservicios, Flask, React).
-*   🧠 **[Leer Decisiones de Diseño](./architecture/DESIGN_DECISIONS.md)** (Trade-offs sobre inferencia y almacenamiento).
+*   📄 **[Ver Diagrama de Arquitectura](architecture/architecture_ES.md)** (Microservicios, Flask, React).
+*   🧠 **[Leer Decisiones de Diseño](architecture/DESIGN_DECISIONS_ES.md)** (Trade-offs sobre inferencia y almacenamiento).
 
 ---
 
@@ -44,9 +43,9 @@ Se han seleccionado módulos específicos para ilustrar la capacidad de orquesta
 
 | Componente | Descripción Técnica | Archivo |
 | :--- | :--- | :--- |
-| **Backend & IA** | Orquestación de modelos con **Lazy Loading** (Singleton), aislamiento de cuotas (Multi-tenant) y patrón Dispatcher. | [📄 backend_example.py](./code-excerpts/backend_example.py) |
-| **Frontend (React)** | Arquitectura asíncrona, máquinas de estado para procesos largos y seguridad vía JWT headers. | [📄 frontend_example.jsx](./code-excerpts/frontend_sample.jsx) |
-| **Base de Datos** | Implementación de políticas **RLS (Row Level Security)** y estructuras JSONB para métricas flexibles. | [📄 schema_example.sql](./code-excerpts/schema_example.sql) |
+| **Backend & IA** | Orquestación de modelos con **Lazy Loading** (Singleton), aislamiento de cuotas (Multi-tenant) y patrón Dispatcher. | [📄 backend_example.py](code-excerpts/backend_example.py) |
+| **Frontend (React)** | Arquitectura asíncrona, máquinas de estado para procesos largos y seguridad vía JWT headers. | [📄 frontend_sample.jsx](code-excerpts/frontend_sample.jsx) |
+| **Base de Datos** | Implementación de políticas **RLS (Row Level Security)** y estructuras JSONB para métricas flexibles. | [📄 schema_example.sql](code-excerpts/schema_example.sql) |
 
 ---
 
@@ -54,7 +53,7 @@ Se han seleccionado módulos específicos para ilustrar la capacidad de orquesta
 
 La persistencia se gestiona en **Supabase (PostgreSQL)**. El diseño garantiza que cada usuario opere en un entorno aislado, encriptado en reposo y tránsito.
 
-![Database Schema](./asset/supabase_schema.png)
+![Database Schema](asset/supabase-schema.jpg)
 
 *   **Seguridad:** Ver `schema_example.sql` para detalles sobre cómo las políticas RLS aseguran el aislamiento total de modelos y predicciones por usuario.
 
@@ -70,15 +69,13 @@ La persistencia se gestiona en **Supabase (PostgreSQL)**. El diseño garantiza q
 
 ## 🛠️ Stack Tecnológico
 
-Lista detallada en [`requirements.txt`](./requirements.txt).
+Lista detallada en [`requirements.txt`](requirements.txt).
 
 *   **Backend:** Python, Flask, Supabase, Google Gemini API.
 *   **Data Science:** Pandas, Scikit-learn, Torch, Polars, NetworkX.
 *   **Frontend:** React, Vite, Material-UI, Plotly.js.
 
 ---
-
-## 👤 Autor
 
 ## 🤖 Metodología de Desarrollo: AI-First
 
@@ -92,5 +89,11 @@ Como único desarrollador (Solo-Founder), utilicé herramientas de IA Generativa
 
 Este enfoque permitió construir un MVP de nivel comercial en un plazo de **6 meses**, demostrando capacidad de gestión de producto y eficiencia técnica.
 
-Desarrollado como una solución integral End-to-End. Si tienes preguntas sobre la implementación técnica o la arquitectura, no dudes en contactarme.
+---
 
+## 👤 Autor
+
+**Miriam Raposo**  
+*Data Science & AI Technician | Solutions Architect*
+
+Desarrollado como una solución integral End-to-End. Si tienes preguntas sobre la implementación técnica, la arquitectura o la metodología AI-First utilizada, no dudes en contactarme.
