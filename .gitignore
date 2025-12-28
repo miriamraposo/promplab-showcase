@@ -1,0 +1,64 @@
+# ===================================================================
+# Archivos de Secretos y Configuración Local (¡MUY IMPORTANTE!)
+# ===================================================================
+.env
+.env.*
+!.env.example
+google-credentials.json
+client_secret_*.json
+
+# ===================================================================
+# Dependencias de Paquetes
+# ===================================================================
+# Node.js - Ignora la carpeta node_modules donde sea que esté
+**/node_modules/
+
+# Python - Ignora carpetas de entorno virtual
+**/venv/
+**/env/
+**/.venv/
+
+# ===================================================================
+# Archivos de Modelos de IA (NO SUBIR ARCHIVOS PESADOS)
+# ===================================================================
+*.pt
+*.onnx
+*.gguf
+
+# ===================================================================
+# Artefactos de Build y Caches
+# ===================================================================
+# Frontend (Vite, React, etc.)
+/promptlab-frontend/dist/
+/promptlab-frontend/build/
+promptlab_backend/pip_downloads/
+
+# Python
+/promptlab_backend/dist/
+/promptlab_backend/build/
+/promptlab_backend/*.egg-info
+
+# Caches de Python
+**/__pycache__/
+*.pyc
+
+# Caches de Testing
+.pytest_cache/
+.coverage
+
+# ===================================================================
+# Logs de Depuración
+# ===================================================================
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+
+# ===================================================================
+# Archivos de Sistema Operativo y Editores
+# ===================================================================
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.lnk
