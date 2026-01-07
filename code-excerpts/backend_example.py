@@ -1,23 +1,27 @@
 # ======================================================
-# Selected Backend Architecture Excerpts – PromptLab
+# Selected Backend Architecture Excerpts – PrompLab
 # ======================================================
 #This file intentionally groups excerpts from different layers to showcase architectural decisions.
 
+
 """
 Alternative: process-level model registry or dependency injection in larger deployments.
+
 [EN] BACKEND ARCHITECTURE OVERVIEW
 This file showcases architectural decisions designed for a scalable AI SaaS (Cloud Run):
 - Thread-safe Singleton pattern for Model Management.
-- "Cloud Native" Lazy Loading to minimize Cold Start times.
+- Cloud-native Lazy Loading to minimize cold start times.
 - Multi-tenant API Key handling (User Key > System Key).
-- Strict File Validation layers for security.
+- Strict file validation layers for security.
 
-[ES] VISIÓN GENERAL ARQUITECTURA BACKEND
-Este archivo muestra decisiones de arquitectura diseñadas para un SaaS de IA escalable:
-- Patrón Singleton Thread-safe para gestión de modelos.
-- Carga Perezosa (Lazy Loading) para minimizar tiempos de arranque en la nube.
-- Manejo multi-tenant de API Keys (Clave Usuario > Clave Sistema).
-- Capas estrictas de validación de archivos por seguridad.
+[ES] VISIÓN GENERAL DE LA ARQUITECTURA BACKEND
+Este archivo muestra decisiones de arquitectura diseñadas para un SaaS de IA escalable (Cloud Run):
+- Patrón Singleton thread-safe para la gestión de modelos pesados.
+- Carga perezosa (Lazy Loading) orientada a reducir tiempos de arranque en entornos serverless.
+- Manejo multi-tenant de claves API (clave de usuario con prioridad sobre clave del sistema).
+- Capas estrictas de validación de archivos enfocadas en seguridad y estabilidad.
+
+
 
 NOTE: This is a showcase of production logic. Imports and specific implementation details 
 have been simplified for readability.
