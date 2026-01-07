@@ -29,14 +29,14 @@ client_secret_*.json
 # Artefactos de Build y Caches
 # ===================================================================
 # Frontend (Vite, React, etc.)
-/promptlab-frontend/dist/
-/promptlab-frontend/build/
-promptlab_backend/pip_downloads/
+/promplab-frontend/dist/
+/promplab-frontend/build/
+promplab_backend/pip_downloads/
 
 # Python
-/promptlab_backend/dist/
-/promptlab_backend/build/
-/promptlab_backend/*.egg-info
+/promplab_backend/dist/
+/promplab_backend/build/
+/promplab_backend/*.egg-info
 
 # Caches de Python
 **/__pycache__/
