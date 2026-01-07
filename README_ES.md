@@ -64,6 +64,7 @@ La persistencia se gestiona en **Supabase (PostgreSQL)**. El diseño garantiza q
 *   **Estado:** MVP funcional operativo en entorno local.
 *   **Roadmap:** Despliegue en la nube (Dockerización) y lanzamiento de versión pública (Freemium).
 *   **Modelo:** SaaS sostenible con bajo costo operativo por usuario (ejecución diferida y optimización de instancias).
+**  **Procesamiento asíncrono:** Las tareas en segundo plano (Celery) forman parte del diseño para producción, pero se omiten en este repositorio hasta ser validadas completamente en infraestructura cloud.
 
 ---
 

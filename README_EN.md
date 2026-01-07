@@ -64,6 +64,7 @@ Persistence is managed via **Supabase (PostgreSQL)**. The design ensures each us
 *   **Status:** Functional MVP operating in a local environment.
 *   **Roadmap:** Cloud deployment (Dockerization) and public launch (Freemium).
 *   **Model:** Sustainable SaaS with low operating cost per user (deferred execution and instance optimization).
+*   **Asynchronous processing** (Celery / background jobs) is planned for production deployment but omitted from this repository until fully validated in cloud infrastructure.”
 
 ---
 
